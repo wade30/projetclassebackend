@@ -7,11 +7,13 @@ const basicAuth = require('./middlewares/basicAuth')
 
 const app = express();
 app.use(bodyParser.json());
-app.use(basicAuth);
+//app.use(basicAuth);
 
 app.use('/etudiants', EtudiantController);
 
 app.use('/employes', EmployeController);
+
+
 
 
 module.exports = app;

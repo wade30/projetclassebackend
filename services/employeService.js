@@ -79,7 +79,7 @@ function create (req, res) {
     })
 }
 
-function deleted (req, res) {
+function deleteEmp (req, res) {
     const id = req.params.id;
     mysqlConnection.query("DELETE FROM `employes` WHERE id = '"+id+"'", (error, results, fields) =>{
         if(!error){
@@ -93,4 +93,4 @@ function deleted (req, res) {
 
 }
 
-module.exports = {getEmployes, getEmpByID, create, deleted}
+module.exports = {getEmployes, getEmpByID, create, deleteEmp}

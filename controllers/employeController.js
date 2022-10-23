@@ -9,11 +9,8 @@ routes.get('/', EmployeServices.getEmployes);
 
 routes.get('/:id', EmployeServices.getEmpByID);
 
-//routes.delete('/:id', EmployeServices.deleteEmp);
+routes.delete('/:id', EmployeServices.deleteEmp);
 
 routes.post('/poster', EmployeServices.create);
-
-
-//export default  routes;
 
 module.exports=routes;
